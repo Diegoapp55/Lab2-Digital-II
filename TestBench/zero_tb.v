@@ -38,8 +38,9 @@ module zero_tb;
   end
 
   always #1 clk = ~clk;
-  initial begin: TEST_CASE
-       $dumpfile("zero_tb.vcd");
-       #(50) $stop;
+  initial begin
+       $dumpfile("zero.vcd");
+       $dumpvars(0,zero_tb);
+       #(50) $finish;
      end
 endmodule

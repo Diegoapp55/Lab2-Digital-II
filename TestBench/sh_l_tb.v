@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "sh_l.v"
 module sh_l_tb;
 // Inputs
 reg [2:0] portA;
@@ -26,25 +27,22 @@ initial begin
   rst = 1;
   portA = 5;
 
-  // Wait 100 ns for global reset to finish
-  #10;
-
-  rst = 0;
+  // Wait 5 ns for global reset to finish
+  #5 rst = 0;
   // Add stimulus here
 
-  #40 init_sh_l = 1; #10 init_sh_l = 0;
-  #40 init_sh_l = 1; #10 init_sh_l = 0;
-  #40 init_sh_l = 1; #10 init_sh_l = 0;
-  #40 init_sh_l = 1; #10 init_sh_l = 0;
-
-  #10 rst = 1;
+  #2  init_sh_l = 1;
+  #15 rst = 1;
+  #2  rst = 0;
+  #4  init_sh_l = 0;
 
 end
 
 always #1 clk = ~clk;
-initial begin: TEST_CASE
-     $dumpfile("sh_l_tb.vcd");
-     #(260) $stop;
+initial begin
+     $dumpfile("sh_l.vcd");
+     $dumpvars(0,sh_l_tb);
+     #(40) $finish;
    end
 
 endmodule

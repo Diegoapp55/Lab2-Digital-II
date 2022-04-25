@@ -10,11 +10,9 @@ module sh_l(
 reg [3:0] A; //Registro que almacenará el número desplazado
 assign sal_sh_l = A;
 
-always @ (posedge clk) begin //Comentar esto para sintetizar y luego descomentarlo para simular
-if (rst) A = {1'b0,portA}; //Devuelve A a su posición original (En los últimos 3 LSB), es decir, reinicia el desplazamiento
+always @ (posedge clk) begin
+  if (rst) A = {1'b0,portA}; //Devuelve A a su posición original (En los últimos 3 LSB), es decir, reinicia el desplazamiento
+  else if (init_sh_l) A <= A << 1; //Desplaza A a la izquierda
 end
 
-always @ (posedge init_sh_l) begin
-  A = A << 1; //Desplaza A a la izquierda
-end
 endmodule

@@ -21,7 +21,7 @@ always @ (posedge clk && init_isZero) begin
                hacerlo a lo malditasea xD (regA = 20 sería hacerlo asíncrono,
                entonces está mal)*/
   // if (init_isZero) begin
-    if (A==0) begin
+    if (A == 0) begin
       z <= 1;
     end else begin
       z <= 0;

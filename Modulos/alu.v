@@ -51,10 +51,10 @@ end
 // Descripcion del miltiplexor
 always @(*) begin
 	case(opcode)
-		2'b00: int_bcd <={12'b0,sal_sh_l};
-		2'b01: int_bcd <={8'b0,sal_sh_r,4'b0};
-		2'b10: int_bcd <={4'b0,sal_isZero,8'b0};
-		2'b11: int_bcd <={sal_div,12'b0}};
+    2'b00: int_bcd <={8'b00,sal_sh_r};
+    2'b01: int_bcd <={8'b00,sal_sh_l};
+    2'b10: int_bcd <={8'b00,sal_isZero};
+    2'b11: int_bcd <={8'b00,sal_div};
 	default:
 		int_bcd <= 0;
 	endcase
@@ -63,10 +63,9 @@ end
 
 
 //instanciaci�n de los componentes - Agregar los shift, zero y divisi�n. Revisar funcionalidad de visualizaci�n
-
-sh_l()
-sh_r()
-zero()
+sh_l(.portA(portA), .init_sh_l(init_sh_l), .clk(clk), .rst(rst), .sal_sh_l(sal_sh_l));
+// sh_r(.portA(portA), .init_sh_r(init_sh_r), .clk(clk), .rst(rst), .sal_sh_r(sal_sh_r));
+zero(.portA(portA), .init_isZero(init_isZero), .clk(clk), .comp(sal_isZero));
 
 //Visualizaci�n - 7seg or l
 display dp( .num(int_bcd), .clk(clk), .sseg(sevenseg), .an(anode), .rst(rst)); //Copiar el módulo de digital 1 que ya sirve para convertir a BCD y todo uwu
