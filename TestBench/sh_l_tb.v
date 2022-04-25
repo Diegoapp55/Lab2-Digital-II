@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "sh_l.v"
+//`include "sh_l.v"
 module sh_l_tb;
 // Inputs
 reg [2:0] portA;

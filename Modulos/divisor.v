@@ -1,4 +1,4 @@
-module divisor( input [2:0] DV,             //Entrada que recibirá el valor de DV (Dividendo)
+/*module divisor( input [2:0] DV,             //Entrada que recibirá el valor de DV (Dividendo)
 							  input [2:0] DR,             //Entrada que recibirá el valor de DR (Divisor)
 								input init,                 //Señal de control xd
 							 	input clk,                 //Señal de reloj para sincronizar
@@ -187,4 +187,4 @@ module div_int #(parameter WIDTH=4) (
             end
         end
     end
-endmodule
+endmodule*/
