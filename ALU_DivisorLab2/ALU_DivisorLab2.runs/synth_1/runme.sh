@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.runs/synth_1'
+HD_PWD='C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

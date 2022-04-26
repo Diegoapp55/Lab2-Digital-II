@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Apr 26 11:22:37 2022
-| Host         : LAPTOP-E6OJ17HV running 64-bit major release  (build 9200)
+| Date         : Tue Apr 26 15:26:26 2022
+| Host         : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file alu_control_sets_placed.rpt
 | Design       : alu
 | Device       : xc7a100t

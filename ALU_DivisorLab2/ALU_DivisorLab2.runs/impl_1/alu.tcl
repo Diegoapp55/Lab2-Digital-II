@@ -65,9 +65,9 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 2
   open_checkpoint alu_routed.dcp
-  set_property webtalk.parent_dir C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/wt [current_project]
   catch { write_mem_info -force alu.mmi }
   write_bitstream -force alu.bit 
   catch {write_debug_probes -quiet -force alu}
