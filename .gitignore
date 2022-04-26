@@ -51,8 +51,11 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-\ALU_DivisorLab2\ALU_DivisorLab2.cache\
-\ALU_DivisorLab2\ALU_DivisorLab2.hw\
-\ALU_DivisorLab2\ALU_DivisorLab2.ip_user_files\
-\ALU_DivisorLab2\ALU_DivisorLab2.runs\
-\ALU_DivisorLab2\ALU_DivisorLab2.sim\
+/ALU_DivisorLab2/ALU_DivisorLab2.cache/
+/ALU_DivisorLab2/ALU_DivisorLab2.hw/
+/ALU_DivisorLab2/ALU_DivisorLab2.ip_user_files/
+/ALU_DivisorLab2/ALU_DivisorLab2.runs/
+/ALU_DivisorLab2/ALU_DivisorLab2.sim/
+*.wdf
+*.wdf
+*.xml
