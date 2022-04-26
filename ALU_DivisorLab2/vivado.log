@@ -1,0 +1,165 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 25 22:51:40 2022
+# Process ID: 3368
+# Current directory: C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7852 C:\Users\SERGIO\Documents\Digital2Lab\Lab2-Digital-II\ALU_DivisorLab2\ALU_DivisorLab2.xpr
+# Log file: C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/vivado.log
+# Journal file: C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 923.012 ; gain = 47.324
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCDtoSSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sh_l
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sh_r
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/zero.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zero
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/TestBench/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim'
+"xelab -wto 6e277e981f224935b798efc7f2e5b779 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 6e277e981f224935b798efc7f2e5b779 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sh_l
+Compiling module xil_defaultlib.sh_r
+Compiling module xil_defaultlib.zero
+Compiling module xil_defaultlib.BCDtoSSeg
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 923.012 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 923.012 ; gain = 0.000
+run 2.1 ms
+$finish called at time : 2100 us : File "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/TestBench/testbench.v" Line 87
+run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 923.012 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: alu
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1260.348 ; gain = 170.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:4]
+INFO: [Synth 8-226] default block is never used [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:42]
+INFO: [Synth 8-226] default block is never used [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:54]
+INFO: [Synth 8-6157] synthesizing module 'sh_l' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'sh_l' (1#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sh_r' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_r.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'sh_r' (2#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_r.v:2]
+INFO: [Synth 8-6157] synthesizing module 'zero' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/zero.v:2]
+WARNING: [Synth 8-6014] Unused sequential element A_reg was removed.  [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/zero.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'zero' (3#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/zero.v:2]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'BCDtoSSeg' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'BCDtoSSeg' (4#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'display' (5#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v:23]
+WARNING: [Synth 8-3848] Net sal_div in module/entity alu does not have driver. [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (6#1) [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:4]
+WARNING: [Synth 8-3917] design alu has port visualizar[15] driven by constant 0
+WARNING: [Synth 8-3917] design alu has port visualizar[14] driven by constant 0
+WARNING: [Synth 8-3917] design alu has port visualizar[13] driven by constant 0
+WARNING: [Synth 8-3917] design alu has port visualizar[12] driven by constant 0
+WARNING: [Synth 8-3331] design alu has unconnected port portB[2]
+WARNING: [Synth 8-3331] design alu has unconnected port portB[1]
+WARNING: [Synth 8-3331] design alu has unconnected port portB[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.879 ; gain = 234.902
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.879 ; gain = 234.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.879 ; gain = 234.902
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1428.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 1469.246 ; gain = 379.270
+20 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:30 . Memory (MB): peak = 1469.246 ; gain = 546.234
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 25 23:10:35 2022...

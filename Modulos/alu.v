@@ -7,7 +7,7 @@ module alu(
     input [1:0] opcode,    //Pines para ingresar el op-code y que la ALU sepa que operación ejecutar
     output [0:6] sevenseg, //Pines para asignar a los 7 segmentos
     output [3:0] anode,    //Pines para multiplexar los ánodos
-    output [15:0] visualizar,
+    //output [15:0] visualizar,
     input clk,             //Pin para sincronizar con el reloj
     input rst              //Pin para habilitar el reset
  );

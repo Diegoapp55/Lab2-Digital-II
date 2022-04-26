@@ -2,8 +2,8 @@
 2019.1
 May 24 2019
 15:06:07
-C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v,1650907392,verilog,,C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v,,BCDtoSSeg,,,,,,,,
+C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/glbl.v,1650944965,verilog,,,,glbl,,,,,,,,
+C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v,1650944965,verilog,,C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v,,BCDtoSSeg,,,,,,,,
 C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v,1650906794,verilog,,C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v,,alu,,,,,,,,
 C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v,1650909876,verilog,,C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v,,display,,,,,,,,
 C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v,1650904551,verilog,,C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_r.v,,sh_l,,,,,,,,

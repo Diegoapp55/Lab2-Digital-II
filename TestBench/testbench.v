@@ -34,7 +34,7 @@ module testbench;
 	// Outputs
 	wire [0:6] sevenseg;
 	wire [3:0] anode;
-	wire [15:0] vis;
+	//wire [15:0] vis;
 
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
@@ -43,7 +43,7 @@ module testbench;
 		.opcode(opcode),
 		.sevenseg(sevenseg),
 		.anode(anode),
-		.visualizar(vis),
+		//.visualizar(vis),
 		.clk(clk),
 		.rst(rst)
 	);

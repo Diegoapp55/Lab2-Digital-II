@@ -3,8 +3,6 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 6e277e981f224935b798efc7f2e5b779 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 1 for port 'comp' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:68]
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 12 for port 'num' [C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v:72]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

@@ -1,61 +1,81 @@
-/*module divisor( input [2:0] DV,             //Entrada que recibirá el valor de DV (Dividendo)
-							  input [2:0] DR,             //Entrada que recibirá el valor de DR (Divisor)
-								input init,                 //Señal de control xd
-							 	input clk,                 //Señal de reloj para sincronizar
-							 	output reg [5:0] dvo,      //El registro que guardará la cuenta de los Cocientes Parciales
-							 	output reg done            //Señal de control para poder pasar al estado final
+module divisor( input [2:0] DV,             //Entrada que recibirá el valor de DV (Dividendo)
+				input [2:0] DR,             //Entrada que recibirá el valor de DR (Divisor)
+				input start,                 //Señal de control xd
+				input rst,
+				input clk,                 //Señal de reloj para sincronizar
+				output reg [5:0] dvo,      //El registro que guardará la cuenta de los Cocientes Parciales
+				output reg done            //Señal de control para poder pasar al estado final
     );
 
-
 //Signals
-
-reg sh; 					   //Señal de control para habilitar el shift
-
+reg init;
+reg sh; 	     	  //Señal de control para habilitar el shift
 reg lda;             //Hace la resta entre A y el divisor
-reg N;               //Cuenta los bits del dividendo. Empieza en el valor de los bits del dividendo y termina en 0.
-reg msb;             //bit mas siginificativo. Es 1 o 0
-reg add; 					   //Señal de control para habilitar la suma (complemento a 2)
-reg [2:0] A; 			   //Dividendo
-reg [2:0] B; 			   //Divisor
-wire z; 					   //Señal de control que producirá el comparador. Informa a la unidad de control si la entrada B es igual a 0 (Done).
+reg [1:0] N;         //Cuenta los bits del dividendo. Empieza en el valor de los bits del dividendo y termina en 0.
+wire msb;             //bit mas siginificativo de sub. Es 1 o 0
+reg dec;            //decremento en 1
+//reg add; 			 //Señal de control para habilitar la suma (complemento a 2)
+reg [2:0] dv0;        //Registro de cocientes parciales
+reg [5:0] A; 		 //Dividendo
+reg [2:0] sub;       //almacena resultados parciales
+reg [2:0] B; 		 //Divisor
+wire z; 			 //Señal de control que producirá el comparador. Informa a la unidad de control si la entrada B es igual a 0 (Done).
 
 reg [2:0] status =0; //Almacena el estado actual de la MEF (0 a 4) (5 en total)
 
 // bloque comparador
-assign z=(N==0)?1:0;      //Si N==0, el comparador se mantiene en 1, pero cuando eso no se cumpla, valdrá 0
+assign z=(N==0)?1:0;          //Si N==0, el comparador se mantiene en 1, pero cuando eso no se cumpla, valdrá 0
+assign msb=(sub[2]==0)?1:0;   //Asignar valor a msb
 
-//bloque complemento a 2
-C2DR = ~DR+1;
 
+//bloque cocientes parciales - almacenar resultado en dv0 comparando con msb de sub
+always @(posedge clk) begin
+    if (msb==1) begin
+        dv0=dv0 << 1;
+        dv0=dv0+1;
+    end else begin
+        dv0=dv0 << 1;
+        dv0=dv0+0;
+    end
+end
 
 //bloques de registros de desplazamiento para A (dividendo)
 always @(posedge clk) begin
-
-	if (init) begin
-		A = {5'b00000,DV[5]};    //Empieza en el bit más significativo del diviendo. Solo toma su MSB
-		B = DR;                 //Mantiene B intacto - Debe ser el complemento a 2 de B
+	if (rst) begin
+		A = {3'b000,DV};    //Empieza en el bit más significativo del diviendo. Solo toma su MSB
+		B = ~DR+1;                 //Mantiene B intacto - Debe ser el complemento a 2 de B
 	end
-	else	begin
+	else if (start)begin
 		if (sh) begin
+		  if (msb) begin
+		      sub = sub << 1;
+		      B = ~DR+1;
+			  N = N-1;
+			  //Falta ver como bajar el siguiente bit del dividendo si hay carry
+		  end
+		  else begin
 			A= A << 1;   //Desplaza A a la izquierda
-			B = B;
-		end
+			B = ~DR+1;
+			N = N-1;
+		  end
+		end 
 	end
 end
 
+//bloque
+
 //bloque de add dv0
 always @(posedge clk) begin
-
-	if (init) begin
-		dv0 = 0;                        //Borra lo que haya en dvo. Vacía el vector.
+	if (rst) begin
+		dv0 <= 0;                        //Borra lo que haya en dvo. Vacía el vector.
 	end
-	else	begin
-		if (add) begin                  //Se empieza a llenar el vector
-			if (A<DR)
+	else begin
+		if (start) begin                  //Se empieza a llenar el vector
+			if (A[4:2]<DR)
 				dv0 = dv0 + 0;             //suma un 0 al resultado final
 			else
 				dv0 = dv0 + 1;             //suma un 1 al resultado final
-				A = A + C2DR;              //Ahora, el nuevo dividendo será el resultado obtenido + el nuevo valor de bit de A
+				sub = A + C2DR;              //Ahora, el nuevo dividendo será el resultado obtenido + el nuevo valor de bit de A
 	 end
 	 N = N-1;                         //El proceso termina cuando N=0;
 	end
@@ -187,4 +207,4 @@ module div_int #(parameter WIDTH=4) (
             end
         end
     end
-endmodule*/
+endmodule
