@@ -1,4 +1,4 @@
-//`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company:
@@ -34,6 +34,7 @@ module testbench;
 	// Outputs
 	wire [0:6] sevenseg;
 	wire [3:0] anode;
+	wire [15:0] vis;
 
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
@@ -42,6 +43,7 @@ module testbench;
 		.opcode(opcode),
 		.sevenseg(sevenseg),
 		.anode(anode),
+		.visualizar(vis),
 		.clk(clk),
 		.rst(rst)
 	);
@@ -52,28 +54,28 @@ module testbench;
 		opcode = 0;
 		clk = 0;
 		rst = 1;
-		portA=5;
-		portB=3;
+		portA=7;
+		portB=0;
 
 		// Wait 100 ns for global reset to finish
 		#10;
 
 		rst = 0;
-		
+
 		// Add stimulus here
 
-		#500000 opcode = 0;
-
-		rst = 1;
-		#2 rst=0;
 		#500000 opcode = 1;
 
-		rst = 1;
-		#2 rst=0;
-		#500000 opcode = 2;
+		// rst = 1;
+		// #2 rst=0;
+		#500000 portA = 0;
+		opcode = 2;
+
+		// rst = 1;
+		// #2 rst=0;
+		#500000 opcode = 3;
 
 		//rst = 1;
-		//#50 opcode = 3;
 
 	end
 

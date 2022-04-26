@@ -7,6 +7,7 @@ module alu(
     input [1:0] opcode,    //Pines para ingresar el op-code y que la ALU sepa que operación ejecutar
     output [0:6] sevenseg, //Pines para asignar a los 7 segmentos
     output [3:0] anode,    //Pines para multiplexar los ánodos
+    output [15:0] visualizar,
     input clk,             //Pin para sincronizar con el reloj
     input rst              //Pin para habilitar el reset
  );
@@ -15,7 +16,7 @@ module alu(
 wire [3:0] sal_sh_r;   //Salidas para el bloque desp. der.
 wire [3:0] sal_sh_l;   //Salidas para el bloque desp. izq.
 wire [3:0] sal_div;    //Salidas para el bloque divisor
-wire [5:0] sal_isZero; //Salidas para el bloque comparador
+wire sal_isZero; //Salidas para el bloque comparador
 
 
 // Declaraci�n de las entradas init de cada bloque (Las señales de control para habilitar una u otra operación de la ALU)
@@ -33,7 +34,7 @@ assign init_isZero=init[2];
 assign init_div=init[3];
 
 reg [15:0]int_bcd; //Registro que se pasará 4 bits por número al módulo display
-
+assign visualizar = int_bcd [15:0];
 //wire [3:0] operacion;
 
 // descripci�n del decodificacion de operaciones (Según el valor de opcode se hará una u otra operación)
@@ -53,7 +54,7 @@ always @(*) begin
 	case(opcode)
     2'b00: int_bcd <={8'b00,sal_sh_r};
     2'b01: int_bcd <={8'b00,sal_sh_l};
-    2'b10: int_bcd <={8'b00,sal_isZero};
+    2'b10: int_bcd <={11'b00,sal_isZero};
     2'b11: int_bcd <={8'b00,sal_div};
 	default:
 		int_bcd <= 0;

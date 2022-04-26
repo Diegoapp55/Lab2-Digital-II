@@ -1,31 +1,31 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 20.04.2022 08:12:39
-// Design Name: 
+// Design Name:
 // Module Name: display
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
 module display(
-    input [11:0] num,
+    input [15:0] num,
     input clk,
     output [0:6] sseg,
     output reg [3:0] an,
-	 input rst
+	  input rst
     );
 
 reg [3:0]bcd=0;
@@ -33,14 +33,14 @@ reg [3:0]bcd=0;
 
 BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg));
 
-reg [28:0] cfreq=0;   //27 bits antes xd
+reg [26:0] cfreq=0;   //Puede que toque dejarlo a 29 bits
 wire enable;
 
 // Divisor de frecuecia
 
 assign enable = cfreq[16];
 always @(posedge clk) begin
-  if(rst==0) begin
+  if(rst) begin
 		cfreq <= 0;
 	end else begin
 		cfreq <=cfreq+1;
@@ -59,7 +59,7 @@ always @(posedge enable) begin
 				2'h0: begin bcd <= num[3:0];   an<=4'b1110; end
 				2'h1: begin bcd <= num[7:4];   an<=4'b1101; end
 				2'h2: begin bcd <= num[11:8];  an<=4'b1011; end
-				//2'h3: begin bcd <= num[15:12]; an<=4'b0111; end
+				2'h3: begin bcd <= num[15:12]; an<=4'b0111; end
 			endcase
 		end
 end
