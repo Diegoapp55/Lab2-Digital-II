@@ -1,0 +1,12 @@
+//-- Source file: C:\Users\SERGIO\Documents\Digital2Lab\leds_on.asm
+//-- Output file format: verilog
+
+//mcode    addr nemonic
+//-----    ---- -------
+203   //-- [000] LD /003
+1FB   //-- [001] ST /1FB
+E00   //-- [002] HALT
+0FF   //-- [003] DATA 255
+
+@1FB   //--       ORG 1FB
+000   //-- [1FB] DATA 0

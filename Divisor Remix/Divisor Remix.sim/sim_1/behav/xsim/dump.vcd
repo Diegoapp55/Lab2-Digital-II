@@ -1,0 +1,57 @@
+$date
+   Mon May  9 11:48:09 2022
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module int_div_tb $end
+$var reg 3 ! a [2:0] $end
+$var reg 3 " b [2:0] $end
+$var wire 3 # yshang [2:0] $end
+$var wire 3 $ yyushu [2:0] $end
+$scope module div $end
+$var wire 3 % a [2:0] $end
+$var wire 3 & b [2:0] $end
+$var reg 3 ' yshang [2:0] $end
+$var reg 3 ( yyushu [2:0] $end
+$var reg 3 ) tempa [2:0] $end
+$var reg 3 * tempb [2:0] $end
+$var reg 6 + temp_a [5:0] $end
+$var reg 6 , temp_b [5:0] $end
+$var integer 32 - i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx !
+bx "
+bx #
+bx $
+bx %
+bx &
+bx '
+bx (
+bx )
+bx *
+bx +
+bx ,
+bx -
+$end
+#10000
+b111 !
+b10 "
+b11 #
+b1 $
+b111 %
+b10 &
+b11 '
+b1 (
+b111 )
+b10 *
+b1011 +
+b10000 ,
+b11 -

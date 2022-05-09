@@ -1,0 +1,278 @@
+$date
+   Wed Apr 27 08:35:23 2022
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module divisor_tb $end
+$var reg 3 ! DV [2:0] $end
+$var reg 3 " DR [2:0] $end
+$var reg 1 # start $end
+$var reg 1 $ clk $end
+$var wire 4 % resultado [3:0] $end
+$var wire 2 & testN [1:0] $end
+$var wire 1 ' testZ $end
+$var wire 1 ( testDone $end
+$var wire 6 ) testDV [5:0] $end
+$var wire 3 * testA [2:0] $end
+$var wire 1 + testdv0 $end
+$scope module uut $end
+$var wire 3 , DV [2:0] $end
+$var wire 3 - DR [2:0] $end
+$var wire 1 . start $end
+$var wire 1 / clk $end
+$var wire 2 & testN [1:0] $end
+$var wire 1 ' testZ $end
+$var wire 1 ( testDone $end
+$var wire 3 * testA [2:0] $end
+$var wire 6 ) testDV [5:0] $end
+$var wire 1 + testdv0 $end
+$var wire 4 % resultado [3:0] $end
+$var reg 1 0 init $end
+$var reg 1 1 sh $end
+$var reg 1 2 lda $end
+$var reg 1 3 done $end
+$var reg 1 4 dec $end
+$var reg 1 5 dv0 $end
+$var reg 2 6 N [1:0] $end
+$var reg 6 7 DVshift [5:0] $end
+$var reg 3 8 A [2:0] $end
+$var reg 3 9 B [2:0] $end
+$var reg 3 : division [2:0] $end
+$var reg 3 ; status [2:0] $end
+$var wire 1 < z $end
+$var parameter 32 = START [31:0] $end
+$var parameter 32 > SHIFT_DEC [31:0] $end
+$var parameter 32 ? CHECK [31:0] $end
+$var parameter 32 @ ADD [31:0] $end
+$var parameter 32 A END1 [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b101 !
+b1 "
+0#
+0$
+b0xxx %
+bx &
+x'
+x(
+bx )
+bx *
+x+
+b101 ,
+b1 -
+0.
+0/
+x0
+x1
+x2
+x3
+x4
+x5
+bx 6
+bx 7
+bx 8
+bx 9
+bx :
+b0 ;
+x<
+b0 =
+b1 >
+b10 ?
+b11 @
+b100 A
+$end
+#1000
+1$
+1/
+01
+02
+04
+#2000
+0$
+0/
+#3000
+1$
+1/
+#4000
+0$
+0/
+#5000
+1$
+1/
+#6000
+0$
+0/
+#7000
+1$
+1/
+#8000
+0$
+0/
+#9000
+1$
+1/
+#10000
+1#
+0$
+1.
+0/
+#11000
+1$
+0(
+0+
+1/
+10
+03
+05
+b1 ;
+#12000
+0$
+0/
+#13000
+1$
+b11 &
+0'
+b101 )
+b0 *
+1/
+00
+11
+14
+b11 6
+b101 7
+b0 8
+b1 9
+b10 ;
+0<
+#14000
+0$
+0/
+#15000
+1$
+b10 &
+b1010 )
+1/
+01
+04
+b10 6
+b1010 7
+b1 ;
+0<
+#16000
+0$
+0/
+#17000
+1$
+1/
+11
+14
+b10 ;
+#18000
+0$
+0/
+#19000
+1$
+b1 &
+b10100 )
+1/
+01
+04
+b1 6
+b10100 7
+b1 ;
+0<
+#20000
+0$
+0/
+#21000
+1$
+1/
+11
+14
+b10 ;
+#22000
+0$
+0/
+#23000
+1$
+b0 &
+1'
+b101000 )
+1/
+01
+04
+b0 6
+b101000 7
+b1 ;
+1<
+#24000
+0$
+0/
+#25000
+1$
+1/
+11
+14
+b10 ;
+#26000
+0$
+0/
+#27000
+1$
+b11 &
+0'
+b10000 )
+1/
+01
+04
+b11 6
+b10000 7
+b100 ;
+0<
+#28000
+0$
+0/
+#29000
+1$
+1(
+1/
+13
+#30000
+0$
+0/
+#31000
+1$
+b0 %
+1/
+b0 :
+#32000
+0$
+0/
+#33000
+1$
+1/
+#34000
+0$
+0/
+#35000
+1$
+1/
+#36000
+0$
+0/
+#37000
+1$
+1/
+#38000
+0$
+0/
+#39000
+1$
+1/

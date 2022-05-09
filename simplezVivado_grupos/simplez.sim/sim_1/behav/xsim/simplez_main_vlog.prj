@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../simplez.srcs/sources_1/imports/src" \
+"../../../../simplez.srcs/sources_1/imports/src/baudgen_rx.v" \
+"../../../../simplez.srcs/sources_1/imports/src/baudgen_tx.v" \
+"../../../../simplez.srcs/sources_1/imports/src/dividerp1.v" \
+"../../../../simplez.srcs/sources_1/imports/src/genram.v" \
+"../../../../simplez.srcs/sources_1/imports/src/simplez.v" \
+"../../../../simplez.srcs/sources_1/imports/src/uart_rx.v" \
+"../../../../simplez.srcs/sources_1/imports/src/uart_tx.v" \
+"../../../../simplez.srcs/sources_1/imports/src/simplez-top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

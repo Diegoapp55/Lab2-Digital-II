@@ -67,7 +67,7 @@ end
 sh_l CorrerIzq (.portA(portA), .init_sh_l(init_sh_l), .clk(clk), .rst(rst), .sal_sh_l(sal_sh_l));
 sh_r CorrerDer (.portA(portA), .init_sh_r(init_sh_r), .clk(clk), .rst(rst), .sal_sh_r(sal_sh_r));
 zero Cero      (.portA(portA), .init_isZero(init_isZero), .clk(clk), .comp(sal_isZero));
-
+divisor        (.DV(portA), .DR(portB), .start(init_div), .clk(clk), .resultado(sal_div));
 
 //Visualizaci�n - 7seg or l
 display dp( .num(int_bcd), .clk(clk), .sseg(sevenseg), .an(anode), .rst(rst)); //Copiar el módulo de digital 1 que ya sirve para convertir a BCD y todo uwu

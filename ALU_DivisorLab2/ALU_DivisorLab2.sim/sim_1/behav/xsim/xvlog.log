@@ -1,17 +1,2 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCDtoSSeg
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2458] undeclared symbol visualizar, assumed default net type wire [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:37]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module display
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/sh_l.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sh_l
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/sh_r.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sh_r
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/zero.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module zero
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/TestBench/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/divisor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divisor

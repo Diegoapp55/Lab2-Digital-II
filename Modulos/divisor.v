@@ -5,6 +5,7 @@ module divisor( input [2:0] DV,     //Entrada que recibirá el valor de DV (Divi
 				output [1:0] testN,         //Señales de depuración, comentar para implementar
 				output testZ,               //
 				output testDone,            //
+				output [2:0] testA,
 				output [5:0] testDV,        //
 				output testdv0,             //Comentar hasta acá
 				output [3:0] resultado      //Registro que entrega el resultado de la división
@@ -20,12 +21,12 @@ reg dv0;            //Determinado por la comparación A < DR (Ver diagrama de fl
 
 // Registros
 reg [1:0] N;           //Contador que debe empezar en el número de bits del dividendo
-reg [5:0] DVshift; 		 //Dividendo (6 bits porque se va desplazando a izq, y no se debe perder la info)
+reg [5:0] DVshift; 	   //Dividendo (6 bits porque se va desplazando a izq, y no se debe perder la info)
 reg [2:0] A;           //Para almacenar los 3MSB de DVshift y poder almacenar la resta
-reg [2:0] B; 		       //Divisor
+reg [2:0] B; 		   //Divisor
 reg [2:0] division;    //Almacena el resultado de la división
 reg [2:0] status =0;   //Almacena el estado actual de la MEF (0 a 4) (5 en total)
-wire z; 			         //Para poder leer la salida dell comparador y saber cuando A=0 de nuevo.
+wire z; 			   //Para poder leer la salida del comparador y saber cuando A=0 de nuevo.
 
 
 // bloque comparador
@@ -39,6 +40,7 @@ assign testZ = z;
 assign testDV = DVshift;
 assign testdv0 = dv0;
 assign testDone = done;
+assign testA = A;
 
 // bloque para las funciones de los estados 0 y 1
 always @(posedge clk) begin
@@ -51,8 +53,8 @@ always @(posedge clk) begin
 	end	else begin
 		if (sh && dec) begin
 			if (dv0) begin
-				A <= (A << 1) + 1;
-				DVshift <= (DVshift << 1) + 1; //Como dv0=1 solo despues de hacer desplazado DVshift y A, podemos sumar 1 a DVshift para agregar temporalmente ese 1 al resultado
+				A <= (A << 1) + DVshift[N-1];
+				DVshift <= (DVshift << 1) + DVshift[N-1]; //Como dv0=1 solo despues de hacer desplazado DVshift y A, podemos sumar 1 a DVshift para agregar temporalmente ese 1 al resultado
 			end else begin
 				A <= A << 1;
 				DVshift <= DVshift << 1;
@@ -66,7 +68,7 @@ end
 // bloque para las funciones del bloque add (La parte de evaluar dv0 se hace en el bloque anterior)
 always @(posedge clk) begin
 
-	if (lda) begin
+	if (lda && dv0) begin
 		A <= DVshift [5:3]; //Si dv0=1 es porque A>=DR y por lo tanto se debe comenzar a almacenar la resta y a desplazarla para acabar la división, entonces, lda=1 (Load A from DVshift)
 		A <= A + (~B + 1); //Resta A y B (Sumando A con el C2 de B)
 	end
@@ -113,7 +115,7 @@ always @(posedge clk) begin
 		dv0=0;
 		if (z==1)                //Según lo que indique el comparador al final de definir los valores, se procederá a repetir el estado 1, o seguir al 4
 			status=END1;
-		else if (DVshift[5:3] < B)   //Si A < DR, el MSB de la resta será cero, acá no hay que hacer más que mandarlo a hacer shift otra vez. Pero si esa condición no se cunple, entonces se carga el registro A con los 3MSB de DVshift y se almacena de forma recursiva ese valor - DR (Ahora A almacenará el resultado de la resta y se puede desplazar)
+		else if (DVshift[5:3] < (~B+1))   //Si A < DR, el MSB de la resta será cero, acá no hay que hacer más que mandarlo a hacer shift otra vez. Pero si esa condición no se cunple, entonces se carga el registro A con los 3MSB de DVshift y se almacena de forma recursiva ese valor - DR (Ahora A almacenará el resultado de la resta y se puede desplazar)
 			status=SHIFT_DEC;
 		else begin
 			status=ADD;
@@ -140,7 +142,7 @@ always @(posedge clk) begin
 			lda=0;
 			dv0=0;
 			dec=0;
-			// status=START;
+			//status=START;
 	end
 	 default:
 		status =START;

@@ -13,6 +13,7 @@ module divisor_tb;
   wire testZ;
   wire testDone;
   wire [5:0] testDV;
+  wire [2:0] testA;
   wire testdv0;
 
 
@@ -27,6 +28,7 @@ divisor uut(
   .testDone(testDone),  //
   .testDV(testDV),      //
   .testdv0(testdv0),    //Hasta acá
+  .testA(testA),
   .resultado(resultado)
 );
 
@@ -38,6 +40,9 @@ initial begin
   start = 0;
 
   #10 start = 1;
+  
+  
+  //#10 start = 0;
 
 
 end
