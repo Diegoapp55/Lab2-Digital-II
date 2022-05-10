@@ -1,27 +1,4 @@
 `timescale 1ns / 1ps
-
-////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
-//
-// Create Date:   22:10:33 09/15/2019
-// Design Name:   alu
-// Module Name:   C:/Users/UECCI/Desktop/ejer01/ALU/alu/testbench.v
-// Project Name:  alu
-// Target Device:
-// Tool versions:
-// Description:
-//
-// Verilog Test Fixture created by ISE for module: alu
-//
-// Dependencies:
-//
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-//
-////////////////////////////////////////////////////////////////////////////////
-
 module testbench;
 
 	// Inputs
@@ -34,7 +11,7 @@ module testbench;
 	// Outputs
 	wire [0:6] sevenseg;
 	wire [3:0] anode;
-	//wire [15:0] vis;
+	wire [15:0] vis;
 
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
@@ -43,7 +20,7 @@ module testbench;
 		.opcode(opcode),
 		.sevenseg(sevenseg),
 		.anode(anode),
-		//.visualizar(vis),
+        .visualizar(vis),
 		.clk(clk),
 		.rst(rst)
 	);
@@ -74,6 +51,8 @@ module testbench;
 		// rst = 1;
 		// #2 rst=0;
 		#500000 opcode = 3;
+		portA=7;
+		portB=2;
 
 		//rst = 1;
 
@@ -84,6 +63,6 @@ module testbench;
 	initial begin
 	     $dumpfile("alu.vcd");
 	     $dumpvars(0,testbench);
-	     #(2100000) $finish;
+	     #(30000000) $finish;
 	   end
 endmodule

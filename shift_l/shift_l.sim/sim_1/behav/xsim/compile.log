@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sh_l
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/TestBench/sh_l_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sh_l_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/shift_l/shift_l.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

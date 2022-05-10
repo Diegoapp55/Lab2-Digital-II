@@ -1,58 +1,56 @@
 `timescale 1ns / 1ps
 module divisor_tb;
 // Inputs
-  reg [2:0] DV;
-  reg [2:0] DR;
-  reg start;
-  reg clk;
-
+reg [2:0] A;
+reg [2:0] B;
+reg clk;
+reg init;
 // Outputs
-  wire [3:0] resultado;
-// Señales para hacer depuración en la simulación, comentar para implementar
-  wire [1:0] testN;
-  wire testZ;
-  wire testDone;
-  wire [5:0] testDV;
-  wire [2:0] testA;
-  wire testdv0;
+wire [2:0] cociente;
+//wire [2:0] residuo;
 
+initial
+begin
+// Initialize inputs
+    clk = 0;
 
+	#10 init = 1;
+	A = 7;
+	B = 2;
+
+	#100;
+	A = 1;
+	B = 3;
+
+	#100;
+	A = 4;
+	B = 2;
+
+	#50 init = 0; //Para simular que se cambió de opcode y debería dejar de dividir
+	#50	A = 6;
+	B = 3;
+
+	#100;
+	A = 2;
+	B = 7;
+
+  end
 // Instantiate the unit under test (UUT)
-divisor uut(
-  .DV(DV),
-  .DR(DR),
-  .start(start),
-  .clk(clk),
-  .testN(testN),        //Comentar desde acá
-  .testZ(testZ),        //
-  .testDone(testDone),  //
-  .testDV(testDV),      //
-  .testdv0(testdv0),    //Hasta acá
-  .testA(testA),
-  .resultado(resultado)
+divisor uut
+(
+.A (A),
+.B (B),
+.clk(clk),
+.init(init),
+.cociente (cociente)
+//.residuo (residuo)
 );
 
-initial begin
-  // Initialize Inputs
-  clk = 0;
-  DV = 5;
-  DR = 1;
-  start = 0;
-
-  #10 start = 1;
-  
-  
-  //#10 start = 0;
-
-
-end
-
 always #1 clk = ~clk;
-
 initial begin
-  $dumpfile("divisor.vcd");
-  $dumpvars(0,divisor_tb);
-  #(40) $finish;
+    //$fsdbDumpvars();
+    $dumpvars();
+    #1000 $finish;
 end
 
 endmodule
