@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed May 11 10:56:06 2022
+| Date         : Wed May 11 11:11:49 2022
 | Host         : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file alu_control_sets_placed.rpt
 | Design       : alu
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |     6 |
+|    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    36 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
-| >= 0 to < 4        |     2 |
+| Total control sets |     6 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
@@ -61,7 +61,7 @@ Table of Contents
 | No           | No                    | No                     |              13 |            5 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              21 |            6 |
-| Yes          | No                    | No                     |               6 |            3 |
+| Yes          | No                    | No                     |               6 |            1 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,16 +70,15 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+-------------------+-------------------+------------------+----------------+
-|   Clock Signal  |   Enable Signal   |  Set/Reset Signal | Slice Load Count | Bel Load Count |
-+-----------------+-------------------+-------------------+------------------+----------------+
-|  Cero/z_i_2_n_0 |                   |                   |                1 |              1 |
-|  dp/enable      |                   |                   |                1 |              2 |
-|  dp/enable      |                   | rst_IBUF          |                1 |              4 |
-|  dp/enable      | dp/bcd[3]_i_2_n_0 | dp/bcd[3]_i_1_n_0 |                1 |              4 |
-|  clk_IBUF_BUFG  | Div/init_div      |                   |                3 |              6 |
-|  clk_IBUF_BUFG  |                   |                   |                3 |             10 |
-|  clk_IBUF_BUFG  |                   | rst_IBUF          |                5 |             17 |
-+-----------------+-------------------+-------------------+------------------+----------------+
++----------------+-------------------+-------------------+------------------+----------------+
+|  Clock Signal  |   Enable Signal   |  Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+-------------------+-------------------+------------------+----------------+
+|  dp/enable     |                   |                   |                1 |              2 |
+|  dp/enable     |                   | rst_IBUF          |                1 |              4 |
+|  dp/enable     | dp/bcd[3]_i_2_n_0 | dp/bcd[3]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | Div/init_div      |                   |                1 |              6 |
+|  clk_IBUF_BUFG |                   |                   |                4 |             11 |
+|  clk_IBUF_BUFG |                   | rst_IBUF          |                5 |             17 |
++----------------+-------------------+-------------------+------------------+----------------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed May 11 10:56:49 2022
+| Date             : Wed May 11 11:12:32 2022
 | Host             : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command          : report_power -file alu_power_routed.rpt -pb alu_power_summary_routed.pb -rpx alu_power_routed.rpx
 | Design           : alu
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 16.634 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 16.646 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 16.219                           |
+| Dynamic (W)              | 16.230                           |
 | Device Static (W)        | 0.416                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 9.1                              |
-| Junction Temperature (C) | 100.9                            |
+| Max Ambient (C)          | 9.0                              |
+| Junction Temperature (C) | 101.0                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.156 |       95 |       --- |             --- |
-|   LUT as Logic |     0.123 |       28 |     63400 |            0.04 |
-|   Register     |     0.017 |       44 |    126800 |            0.03 |
+| Slice Logic    |     0.130 |       94 |       --- |             --- |
+|   LUT as Logic |     0.098 |       27 |     63400 |            0.04 |
+|   Register     |     0.016 |       44 |    126800 |            0.03 |
 |   CARRY4       |     0.010 |        5 |     15850 |            0.03 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.296 |       73 |       --- |             --- |
-| I/O            |    15.767 |       21 |       210 |           10.00 |
+| Signals        |     0.279 |       72 |       --- |             --- |
+| I/O            |    15.821 |       21 |       210 |           10.00 |
 | Static Power   |     0.416 |          |           |                 |
-| Total          |    16.634 |          |           |                 |
+| Total          |    16.646 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.754 |       0.488 |      0.266 |
-| Vccaux    |       1.800 |     0.628 |       0.576 |      0.052 |
-| Vcco33    |       3.300 |     4.456 |       4.452 |      0.004 |
+| Vccint    |       1.000 |     0.712 |       0.445 |      0.267 |
+| Vccaux    |       1.800 |     0.630 |       0.578 |      0.052 |
+| Vcco33    |       3.300 |     4.472 |       4.468 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,13 +138,13 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| alu           |    16.219 |
-|   Cero        |     0.007 |
-|   CorrerDer   |     0.006 |
-|   CorrerIzq   |     0.010 |
-|   Div         |     0.024 |
-|   dp          |     0.315 |
-|     bcdtosseg |     0.037 |
+| alu           |    16.230 |
+|   Cero        |     0.003 |
+|   CorrerDer   |     0.007 |
+|   CorrerIzq   |     0.008 |
+|   Div         |     0.023 |
+|   dp          |     0.290 |
+|     bcdtosseg |     0.036 |
 +---------------+-----------+
 
 
