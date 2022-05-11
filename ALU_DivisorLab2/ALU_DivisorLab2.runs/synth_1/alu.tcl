@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +32,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v
   C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/display.v
+  C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/divisor.v
   C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/sh_l.v
   C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/sh_r.v
   C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/zero.v

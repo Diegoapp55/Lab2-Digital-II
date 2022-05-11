@@ -15,9 +15,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2332 
+INFO: Helper process launched with PID 9604 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 717.059 ; gain = 177.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 716.648 ; gain = 178.039
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:4]
 INFO: [Synth 8-226] default block is never used [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:42]
@@ -29,18 +29,18 @@ INFO: [Synth 8-6155] done synthesizing module 'sh_r' (2#1) [C:/Datos/UNAL/Materi
 INFO: [Synth 8-6157] synthesizing module 'zero' [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/zero.v:2]
 WARNING: [Synth 8-6014] Unused sequential element A_reg was removed.  [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/zero.v:18]
 INFO: [Synth 8-6155] done synthesizing module 'zero' (3#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/zero.v:2]
+INFO: [Synth 8-6157] synthesizing module 'divisor' [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/divisor.v:2]
+WARNING: [Synth 8-6014] Unused sequential element temp_a_reg was removed.  [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/divisor.v:29]
+WARNING: [Synth 8-6014] Unused sequential element temp_b_reg was removed.  [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/divisor.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'divisor' (4#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/divisor.v:2]
 INFO: [Synth 8-6157] synthesizing module 'display' [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/display.v:23]
 INFO: [Synth 8-6157] synthesizing module 'BCDtoSSeg' [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v:23]
 INFO: [Synth 8-226] default block is never used [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'BCDtoSSeg' (4#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'display' (5#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/display.v:23]
-WARNING: [Synth 8-3848] Net sal_div in module/entity alu does not have driver. [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (6#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:4]
-WARNING: [Synth 8-3331] design alu has unconnected port portB[2]
-WARNING: [Synth 8-3331] design alu has unconnected port portB[1]
-WARNING: [Synth 8-3331] design alu has unconnected port portB[0]
+INFO: [Synth 8-6155] done synthesizing module 'BCDtoSSeg' (5#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/BCDtoSSeg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'display' (6#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/display.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (7#1) [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/Modulos/alu.v:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 780.266 ; gain = 241.004
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 780.680 ; gain = 242.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -53,47 +53,44 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 780.266 ; gain = 241.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 780.680 ; gain = 242.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 780.266 ; gain = 241.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 780.680 ; gain = 242.070
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc]
-WARNING: [Vivado 12-584] No ports matched 'portB[2])'. [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alu_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/alu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 877.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 890.359 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 877.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 890.359 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -106,12 +103,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   3 Input      6 Bit       Adders := 2     
+	   3 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 5     
@@ -146,6 +147,15 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module divisor 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      6 Bit       Adders := 2     
+	   3 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 2     
 Module display 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -171,11 +181,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design alu has unconnected port portB[2]
-WARNING: [Synth 8-3331] design alu has unconnected port portB[1]
-WARNING: [Synth 8-3331] design alu has unconnected port portB[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -187,13 +194,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 877.652 ; gain = 338.391
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 890.359 ; gain = 351.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -205,7 +212,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 896.879 ; gain = 357.617
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 891.633 ; gain = 353.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -229,7 +236,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -242,7 +249,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -254,25 +261,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -291,14 +298,14 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     5|
 |3     |LUT1   |     2|
-|4     |LUT2   |     5|
+|4     |LUT2   |     6|
 |5     |LUT3   |     5|
 |6     |LUT4   |     9|
-|7     |LUT5   |     4|
-|8     |LUT6   |     4|
-|9     |FDRE   |    31|
+|7     |LUT5   |     6|
+|8     |LUT6   |     7|
+|9     |FDRE   |    40|
 |10    |FDSE   |     4|
-|11    |IBUF   |     7|
+|11    |IBUF   |    10|
 |12    |OBUF   |    11|
 +------+-------+------+
 
@@ -306,35 +313,36 @@ Report Instance Areas:
 +------+--------------+----------+------+
 |      |Instance      |Module    |Cells |
 +------+--------------+----------+------+
-|1     |top           |          |    88|
+|1     |top           |          |   106|
 |2     |  Cero        |zero      |     3|
 |3     |  CorrerDer   |sh_r      |     6|
-|4     |  CorrerIzq   |sh_l      |    12|
-|5     |  dp          |display   |    48|
-|6     |    bcdtosseg |BCDtoSSeg |     6|
+|4     |  CorrerIzq   |sh_l      |     9|
+|5     |  Div         |divisor   |    18|
+|6     |  dp          |display   |    48|
+|7     |    bcdtosseg |BCDtoSSeg |     6|
 +------+--------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 896.422 ; gain = 357.812
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 901.660 ; gain = 265.012
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 901.660 ; gain = 362.398
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 896.422 ; gain = 248.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 896.422 ; gain = 357.812
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.023 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 9 Warnings, 1 Critical Warnings and 0 Errors encountered.
+29 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 921.152 ; gain = 626.406
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.152 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 916.023 ; gain = 621.230
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.023 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.runs/synth_1/alu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file alu_utilization_synth.rpt -pb alu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 15:25:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed May 11 10:55:25 2022...

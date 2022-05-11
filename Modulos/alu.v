@@ -8,7 +8,7 @@ module alu(
     output [0:6] sevenseg, //Pines para asignar a los 7 segmentos
     output [3:0] anode,    //Pines para multiplexar los ánodos
     //output [3:0] sal_Dv,
-    output [15:0] visualizar,
+    //output [15:0] visualizar,
     input clk,             //Pin para sincronizar con el reloj
     input rst              //Pin para habilitar el reset
  );
@@ -34,7 +34,7 @@ assign init_isZero=init[2];
 assign init_div=init[3];
 
 reg [15:0]int_bcd; //Registro que se pasará 4 bits por número al módulo display
-assign visualizar = int_bcd[15:0];
+//assign visualizar = int_bcd[15:0];
 //wire [3:0] operacion;
 
 // descripci�n del decodificacion de operaciones (Según el valor de opcode se hará una u otra operación)

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Apr 26 15:27:12 2022
+| Date         : Wed May 11 10:56:47 2022
 | Host         : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command      : report_drc -file alu_drc_routed.rpt -pb alu_drc_routed.pb -rpx alu_drc_routed.rpx
 | Design       : alu
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 3
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
 | PDRC-153    | Warning  | Gated clock check                                           | 1          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-| PLIO-3      | Warning  | Placement Constraints Check for IO constraints              | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -58,11 +57,6 @@ PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT Cero/z_i_2 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
 Cero/z_reg
-Related violations: <none>
-
-PLIO-3#1 Warning
-Placement Constraints Check for IO constraints  
-Partially locked IO Bus is found. Following components of the IO Bus portB[2:0] are not locked:  portB[2]
 Related violations: <none>
 
 

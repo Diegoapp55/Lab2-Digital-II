@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Tue Apr 26 15:26:26 2022
+| Date                      : Wed May 11 10:56:06 2022
 | Host                      : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command                   : report_io -file alu_io_placed.rpt
 | Design                    : alu
@@ -166,7 +166,7 @@ Table of Contents
 | H3         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H4         |             | High Range | IO_L21N_T3_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H5         |             | High Range | IO_L24N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| H6         |             | High Range | IO_L24P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| H6         | portB[2]    | High Range | IO_L24P_T3_35                | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H7         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H8         |             |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H9         |             | Dedicated  | GNDADC_0                     | XADC        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
