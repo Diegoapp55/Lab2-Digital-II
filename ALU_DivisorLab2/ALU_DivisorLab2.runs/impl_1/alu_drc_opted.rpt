@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed May 11 11:11:45 2022
+| Date         : Fri May 13 21:56:37 2022
 | Host         : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command      : report_drc -file alu_drc_opted.rpt -pb alu_drc_opted.pb -rpx alu_drc_opted.rpx
 | Design       : alu

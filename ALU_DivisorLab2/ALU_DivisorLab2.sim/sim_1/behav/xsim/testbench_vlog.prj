@@ -2,6 +2,7 @@
 verilog xil_defaultlib  \
 "../../../../../Modulos/BCDtoSSeg.v" \
 "../../../../../Modulos/alu.v" \
+"../../../../../Modulos/detector.v" \
 "../../../../../Modulos/display.v" \
 "../../../../../Modulos/divisor.v" \
 "../../../../../Modulos/sh_l.v" \

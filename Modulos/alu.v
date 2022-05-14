@@ -7,8 +7,9 @@ module alu(
     input [1:0] opcode,    //Pines para ingresar el op-code y que la ALU sepa que operación ejecutar
     output [0:6] sevenseg, //Pines para asignar a los 7 segmentos
     output [3:0] anode,    //Pines para multiplexar los ánodos
-    //output [3:0] sal_Dv,
     //output [15:0] visualizar,
+    //output testFlanco,
+    input sh_now,             //Pin para sincronizar con el reloj
     input clk,             //Pin para sincronizar con el reloj
     input rst              //Pin para habilitar el reset
  );
@@ -35,7 +36,7 @@ assign init_div=init[3];
 
 reg [15:0]int_bcd; //Registro que se pasará 4 bits por número al módulo display
 //assign visualizar = int_bcd[15:0];
-//wire [3:0] operacion;
+//wire [3:0] operacion; //Esto no se usa, borrarlo para la sustentacion
 
 // descripci�n del decodificacion de operaciones (Según el valor de opcode se hará una u otra operación)
 always @(*) begin
@@ -63,8 +64,8 @@ end
 
 
 //instanciaci�n de los componentes - Agregar los shift, zero y divisi�n. Revisar funcionalidad de visualizaci�n
-sh_l CorrerIzq (.portA(portA), .init_sh_l(init_sh_l), .clk(clk), .rst(rst), .sal_sh_l(sal_sh_l));
-sh_r CorrerDer (.portA(portA), .init_sh_r(init_sh_r), .clk(clk), .rst(rst), .sal_sh_r(sal_sh_r));
+sh_l CorrerIzq (.portA(portA), .init_sh_l(init_sh_l), .sh_now(sh_now), .clk(clk), .rst(rst), /*.testFlanco(testFlanco),*/.sal_sh_l(sal_sh_l));
+sh_r CorrerDer (.portA(portA), .init_sh_r(init_sh_r), .sh_now(sh_now), .clk(clk), .rst(rst), .sal_sh_r(sal_sh_r));
 zero Cero      (.portA(portA), .init_isZero(init_isZero), .clk(clk), .comp(sal_isZero));
 divisor Div    (.A(portA), .B(portB), .clk(clk), .init(init_div), .cociente(sal_div));
 

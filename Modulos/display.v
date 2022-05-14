@@ -38,7 +38,7 @@ wire enable;
 
 // Divisor de frecuecia
 
-assign enable = cfreq[16];
+assign enable = cfreq[16]; //Original=16. Disminuir el indice de cfreq para acelerar simulacion, aumentarlo para visualizar mas lento en la tarjeta
 always @(posedge clk) begin
   if(rst) begin
 		cfreq <= 0;

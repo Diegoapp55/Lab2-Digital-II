@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed May 11 11:11:49 2022
+| Date         : Fri May 13 21:56:42 2022
 | Host         : DESKTOP-30PLG39 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file alu_control_sets_placed.rpt
 | Design       : alu
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    27 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              13 |            5 |
+| No           | No                    | No                     |              13 |            4 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              21 |            6 |
-| Yes          | No                    | No                     |               6 |            1 |
+| No           | Yes                   | No                     |              22 |            7 |
+| Yes          | No                    | No                     |               6 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -76,9 +76,9 @@ Table of Contents
 |  dp/enable     |                   |                   |                1 |              2 |
 |  dp/enable     |                   | rst_IBUF          |                1 |              4 |
 |  dp/enable     | dp/bcd[3]_i_2_n_0 | dp/bcd[3]_i_1_n_0 |                1 |              4 |
-|  clk_IBUF_BUFG | Div/init_div      |                   |                1 |              6 |
-|  clk_IBUF_BUFG |                   |                   |                4 |             11 |
-|  clk_IBUF_BUFG |                   | rst_IBUF          |                5 |             17 |
+|  clk_IBUF_BUFG | Div/init_div      |                   |                2 |              6 |
+|  clk_IBUF_BUFG |                   |                   |                3 |             11 |
+|  clk_IBUF_BUFG |                   | rst_IBUF          |                6 |             18 |
 +----------------+-------------------+-------------------+------------------+----------------+
 
 
