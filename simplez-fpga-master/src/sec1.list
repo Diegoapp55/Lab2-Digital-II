@@ -1,0 +1,18 @@
+//-- Source file: C:\Users\SERGIO\Documents\Digital2Lab\Lab2-Digital-II\Assembler\sumator.asm
+//-- Output file format: verilog
+
+//mcode    addr nemonic
+//-----    ---- -------
+
+@040   //--       ORG 040
+245   //-- [040] LD /045
+446   //-- [041] ADD /046
+047   //-- [042] ST /047
+1FB   //-- [043] ST /1FB
+E00   //-- [044] HALT
+007   //-- [045] DATA 7
+008   //-- [046] DATA 8
+000   //-- [047] DATA 0
+
+@1FB   //--       ORG 1FB
+000   //-- [1FB] DATA 0

@@ -1,0 +1,43 @@
+//-- Source file: C:\Users\SERGIO\Documents\Digital2Lab\Lab2-Digital-II\Assembler\contar2en2.asm
+//-- Output file format: verilog
+
+//mcode    addr nemonic
+//-----    ---- -------
+A00   //-- [000] CLR
+030   //-- [001] ST /030
+032   //-- [002] ST /032
+234   //-- [003] LD /034
+02F   //-- [004] ST /02F
+235   //-- [005] LD /035
+02E   //-- [006] ST /02E
+22F   //-- [007] LD /02F
+430   //-- [008] ADD /030
+031   //-- [009] ST /031
+032   //-- [00A] ST /032
+1FB   //-- [00B] ST /1FB
+F00   //-- [00C] WAIT
+F00   //-- [00D] WAIT
+F00   //-- [00E] WAIT
+231   //-- [00F] LD /031
+030   //-- [010] ST /030
+22E   //-- [011] LD /02E
+C00   //-- [012] DEC
+816   //-- [013] BZ /016
+02E   //-- [014] ST /02E
+607   //-- [015] BR /007
+232   //-- [016] LD /032
+1FB   //-- [017] ST /1FB
+E00   //-- [018] HALT
+
+@02E   //--       ORG 02E
+000   //-- [02E] DATA 0
+000   //-- [02F] DATA 0
+000   //-- [030] DATA 0
+000   //-- [031] DATA 0
+000   //-- [032] DATA 0
+001   //-- [033] DATA 1
+002   //-- [034] DATA 2
+00A   //-- [035] DATA 10
+
+@1FB   //--       ORG 1FB
+000   //-- [1FB] DATA 0
