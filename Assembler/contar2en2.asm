@@ -27,16 +27,22 @@
         CLR
         ST /ult   ; ult = 0
         ST /sum   ; sum = 0
+        ST /leds
         LD /num2   ;
         ST /pen   ; pen = 2
         LD /num10
         ST /cont  ; CONT = 10
+        WAIT
+        WAIT
+        WAIT
+        WAIT
 
 loop    LD /pen
         ADD /ult
         ST /sig    ; SIG = PEN + ULT = 2 + 0
         ST /sum    ; sum = 2 + ult
         ST /leds
+        WAIT
         WAIT
         WAIT
         WAIT
@@ -61,7 +67,6 @@ pen     DATA 0
 ult     DATA 0
 sig     DATA 0
 sum     DATA 0
-uno     DATA 1
 num2    DATA 2
 num10   DATA 10
 

@@ -28,7 +28,11 @@ module genram #(             //-- Parametros
 //parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/ledson.list";   //LEds on
 //parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/sumator.list";      //Suma
 //parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/progcont2en2.list";      //Conteo
-parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/cont22.list";  //cont22
+//parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/cont22.list";  //cont22
+//parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/boot.list";
+//parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/cont22of.list";
+parameter ROMFILE = "C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/GSRemix.list";
+
 
 //-- Calcular el numero de posiciones totales de memoria
 localparam NPOS = 2 ** AW;
