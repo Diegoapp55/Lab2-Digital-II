@@ -1,6 +1,8 @@
 ;-- Programas de ejemplo para Simplez
 ;-- Sumar 2 números guardados en registros
 
+;org h'40
+
 ld /num1
 add /num2
 st /suma

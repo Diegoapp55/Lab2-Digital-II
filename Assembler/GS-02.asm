@@ -1,3 +1,13 @@
+;-- Acceso a los perifericos
+LEDS      EQU 507
+TXSTATUS  EQU 508
+TXDATA    EQU 509
+RXSTATUS  EQU 510
+RXDATA    EQU 511
+
+
+        ORG h'40
+
 WAIT         ;-- Inicio: esperar 200ms
 
 ld /car1
@@ -27,15 +37,15 @@ car3  DATA  "-"
 car4  DATA  "0"
 car5  DATA  "2"
 
- ORG 509
-TXDATA  DATA 0
+;ORG 509
+;TXDATA  DATA 0
 
 
 ;------ PERIFERICOS ------------------
 
 ;-- Pantalla
 
-   ORG 508
-TXSTATUS  DATA    0  ;-- 508:  Registro de estado
+;ORG 508
+;TXSTATUS  DATA    0  ;-- 508:  Registro de estado
 
 end
