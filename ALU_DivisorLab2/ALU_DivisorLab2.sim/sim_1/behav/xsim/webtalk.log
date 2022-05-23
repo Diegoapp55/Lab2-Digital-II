@@ -1,14 +1,15 @@
 #-----------------------------------------------------------
 # Webtalk v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri May 13 20:58:46 2022
-# Process ID: 3812
-# Current directory: C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Sun May 22 13:31:55 2022
+# Process ID: 51805
+# Current directory: /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Datos/UNAL/Materias/2022-1/Electronica_Digital_II/Laboratorios/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri May 13 20:58:51 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri May 13 20:58:51 2022...
+source /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun May 22 13:32:02 2022. For additional details about this file, please refer to the WebTalk help file at //home/diegoapp55/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 381.398 ; gain = 0.000 ; free physical = 116 ; free virtual = 8023
+INFO: [Common 17-206] Exiting Webtalk at Sun May 22 13:32:02 2022...
