@@ -45,7 +45,7 @@ leer_1    LD  /RXSTATUS
           LD  /RXDATA
           ST  /tecla_leida
 
-; Se muestra por pantalla a modo prueba.
+; Se muestra por pantalla a modo prueba. Revisar bien esto en implementación.
 write_1   LD  /TXSTATUS
           BZ  /write_1
           LD  /tecla_leida
@@ -59,7 +59,7 @@ test_up   LD  /tecla_leida      ; Se preparan los parámetros.
           ADD @up               ; @up - El retorno de valores iguales apunta a la función "up" cuya referencia está en la dirección "direc_up".
           ST  /ret_iguales      ;
           LD  /br_code          ; El retorno de valores distintos apunta a "test_down" para seguir probando con la tecla "down".
-          ADD @test_down        ; @test_down
+          ADD @fin        ; Original @test_down
           ST  /ret_distintos    ;
           BR  /comparar         ; Una vez preparados los parámetros y las direcciones de retorno se ejecuta la subrutina.
 
@@ -102,6 +102,24 @@ test_up   LD  /tecla_leida      ; Se preparan los parámetros.
           ; Ejecuta si up.
 up        LD  /salida1
           ST  /LEDS
+          LD /car1
+          ST /TXDATA   ;-- Escribir en pantalla en primer caracter
+          WAIT         ;-- No se usa el registro de status. Se espera un tiempo
+
+          LD /car2
+          ST /TXDATA   ;-- Escribir el segundo caracter
+          WAIT
+
+          LD /car3
+          ST /TXDATA   ;-- Escribir en pantalla en primer caracter
+          WAIT         ;-- No se usa el registro de status. Se espera un tiempo
+
+          LD /car4
+          ST /TXDATA   ;-- Escribir el segundo caracter
+          WAIT         ;-- No se usa el registro de status. Se espera un tiempo
+
+          LD /car5
+          ST /TXDATA   ;-- Escribir el segundo caracter
           BR  /fin
 
 ;          ;Ejecuta si down.
@@ -156,14 +174,19 @@ ret_iguales    DATA 0               ; dato1 == dato2
 ;-- Variables y constantes --;
 ;----------------------------;
 br_code          BR    /0
-tecla_up         DATA  "w"          ;Original "q"
+tecla_up         DATA  "w"          ;Original "q". Probar https://css-tricks.com/snippets/javascript/javascript-keycodes/#aa-tester-tool para usar las flechas, aunque no creo que sirva porque eso es para java keyboard events
 ;tecla_down       DATA  "a"
 ;tecla_right      DATA  "p"
 ;tecla_left       DATA  "o"
 tecla_leida      DATA  H'00
 dato1            DATA  H'00
 dato2            DATA  H'00
-salida1          DATA  "GS-02"
+salida1          DATA  H'02 ;Para mostrar el 2 en los leds
+car1  DATA  "G"
+car2  DATA  "S"
+car3  DATA  "-"
+car4  DATA  "0"
+car5  DATA  "2"
 ;salida2          DATA  H'02
 ;salida3          DATA  H'04
 ;salida4          DATA  H'08
