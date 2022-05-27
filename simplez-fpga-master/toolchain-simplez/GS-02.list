@@ -1,0 +1,31 @@
+//-- Source file: ../../Assembler/GS-02.asm
+//-- Output file format: verilog
+
+//mcode    addr nemonic
+//-----    ---- -------
+
+@040   //--       ORG 040
+F00   //-- [040] WAIT
+257   //-- [041] LD /057
+1FB   //-- [042] ST /1FB
+252   //-- [043] LD /052
+1FD   //-- [044] ST /1FD
+F00   //-- [045] WAIT
+253   //-- [046] LD /053
+1FD   //-- [047] ST /1FD
+F00   //-- [048] WAIT
+254   //-- [049] LD /054
+1FD   //-- [04A] ST /1FD
+F00   //-- [04B] WAIT
+255   //-- [04C] LD /055
+1FD   //-- [04D] ST /1FD
+F00   //-- [04E] WAIT
+256   //-- [04F] LD /056
+1FD   //-- [050] ST /1FD
+E00   //-- [051] HALT
+047   //-- [052] DATA 71
+053   //-- [053] DATA 83
+02D   //-- [054] DATA 45
+030   //-- [055] DATA 48
+032   //-- [056] DATA 50
+002   //-- [057] DATA 2

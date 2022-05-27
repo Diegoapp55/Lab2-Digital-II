@@ -1,8 +1,8 @@
-;-- Acceso a los perifericos (Para bootloader)
-;leds    EQU 507
-;-- Comienzo del programa:
-;-- Direccion h'40: para cargarlo con el bootloader
-;      org h'40
+;;-- Acceso a los perifericos (Para bootloader)
+leds    EQU 507
+;;-- Comienzo del programa:
+;;-- Direccion h'40: para cargarlo con el bootloader
+      org h'40
 
      ld /diez
      st /cont   ;Para el reset del contador
@@ -35,9 +35,9 @@ two     DATA  h'2
 diez    DATA  h'A
 cont    DATA  h'A
 
-;---- Perifericos (Sin bootloader)
+;;---- Perifericos (Sin bootloader)
 
-    ORG 507
-leds  RES 1    ;-- Leds. Reservar 1 posicion de memoria en la direccion 507
+;    ORG 507
+;leds  RES 1    ;-- Leds. Reservar 1 posicion de memoria en la direccion 507
 
    end
