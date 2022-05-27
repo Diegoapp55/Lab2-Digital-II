@@ -1,4 +1,4 @@
-//-- Source file: C:\Users\SERGIO\Documents\Digital2Lab\Lab2-Digital-II\simplez-fpga-master\asm\boot\boot.asm
+//-- Source file: ../asm/boot/boot.asm
 //-- Output file format: verilog
 
 //mcode    addr nemonic

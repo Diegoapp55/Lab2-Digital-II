@@ -13,7 +13,8 @@
 module simplez  #(
            parameter BAUD = `B115200,        //-- Velocidad de comunicacion de la pantalla / Teclado
            parameter WAIT_DELAY = `T_200ms,  //-- Tiempo de espera para la instruccion WAIT (Debug)
-           parameter ROMFILE = "/home/alex/Digital2/LabDigital2_2022_I/Practica_2/simplez-fpga/boot.list",  //-- Fichero con el contenido de la RAM a cargar
+//           parameter ROMFILE = "/home/alex/Digital2/LabDigital2_2022_I/Practica_2/simplez-fpga/boot.list",  //-- Fichero con el contenido de la RAM a cargar
+           parameter ROMFILE = "/home/diegoapp55/Documentos/UNAL/Digital-II/Lab-2/Lab2-Digital-II/simplezVivado_grupos/simplez.srcs/sources_1/imports/src/boot.list",
            parameter DEBUG_LEDS = 0          //-- Uso de los leds para depuracion
 )(
            input wire clk,          //-- Reloj del sistema

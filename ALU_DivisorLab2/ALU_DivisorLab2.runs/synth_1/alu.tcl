@@ -22,21 +22,21 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/wt [current_project]
-set_property parent.project_path C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.xpr [current_project]
+set_property webtalk.parent_dir /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/wt [current_project]
+set_property parent.project_path /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/ip [current_project]
+set_property ip_output_repo /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/BCDtoSSeg.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/detector.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/display.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/divisor.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_l.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/sh_r.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/zero.v
-  C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/Modulos/alu.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/BCDtoSSeg.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/detector.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/display.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/divisor.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/sh_l.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/sh_r.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/zero.v
+  /home/diegoapp55/Documentos/Lab2-Digital-II/Modulos/alu.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -46,8 +46,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc
-set_property used_in_implementation false [get_files C:/Users/SERGIO/Documents/Digital2Lab/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc]
+read_xdc /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc
+set_property used_in_implementation false [get_files /home/diegoapp55/Documentos/Lab2-Digital-II/ALU_DivisorLab2/ALU_DivisorLab2.srcs/constrs_1/new/pies.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

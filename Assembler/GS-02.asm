@@ -10,6 +10,9 @@ RXDATA    EQU 511
 
 WAIT         ;-- Inicio: esperar 200ms
 
+ld /grup
+st /LEDS
+
 ld /car1
 st /TXDATA   ;-- Escribir en pantalla en primer caracter
 WAIT         ;-- No se usa el registro de status. Se espera un tiempo
@@ -36,7 +39,7 @@ car2  DATA  "S"
 car3  DATA  "-"
 car4  DATA  "0"
 car5  DATA  "2"
-
+grup  DATA 2
 ;ORG 509
 ;TXDATA  DATA 0
 

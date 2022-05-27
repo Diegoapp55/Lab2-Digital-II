@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat May 14 15:47:27 2022
-| Host         : LAPTOP-E6OJ17HV running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Sun May 22 10:11:31 2022
+| Host         : diegoapp55 running 64-bit Ubuntu 22.04 LTS
 | Command      : report_control_sets -verbose -file alu_control_sets_placed.rpt
 | Design       : alu
 | Device       : xc7a100t
